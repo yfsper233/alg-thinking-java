@@ -1,6 +1,5 @@
 package com.yfs.greedy;
 
-import org.omg.CORBA.INTERNAL;
 
 import java.util.Arrays;
 
@@ -42,26 +41,32 @@ import java.util.Arrays;
  * 链接：https://leetcode-cn.com/problems/assign-cookies
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class Greedy1_AssignCookies {
+public class Greedy_1_AssignCookies {
     public static void main(String[] args) {
-        int[] g = {1, 2, 3};
-        int[] s = {3};
-//        int n = solveAssignCookies(g, s);
-        int i = solveAssignCookiesII(g, s);
+        int[] children = {10, 9, 8,7};
+        int[] cookies = {5,6,7,8};
+//        int i1 = solveAssignCookies(children, cookies);
+        int i2 = solveAssignCookiesII(children, cookies);
         // 2024/01/04
-        int i3 = solveAssignCookiesIII(g, s);
-        System.out.println(i);
+        int i3 = solveAssignCookiesIII(children, cookies);
     }
 
-    private static int solveAssignCookiesIII(int[] g, int[] s) {
+    private static int solveAssignCookiesIII(int[] children, int[] cookies) {
         int count = 0;
-        Arrays.sort(g);
-        Arrays.sort(s);
+        Arrays.sort(children);
+        Arrays.sort(cookies);
 
-        for (int i = 0; i < g.length; i++) {
-
+        int j = 0;
+        for (int i = 0; i < children.length; i++) {
+            for ( ; j < cookies.length; j++) {
+                if (children[i] <= cookies[j]){
+                    count++;
+                    j++;
+                    break;
+                }
+            }
         }
-        return 0;
+        return count;
     }
 
     private static int solveAssignCookiesII(int[] g, int[] s) {
