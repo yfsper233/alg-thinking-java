@@ -1,7 +1,5 @@
 package com.yfs.greedy;
 
-import java.util.HashMap;
-
 /**
  * 在柠檬水摊上，每一杯柠檬水的售价为 5 美元。顾客排队购买你的产品，（按账单 bills 支付的顺序）一次购买一杯。
  * <p>
@@ -42,11 +40,44 @@ import java.util.HashMap;
  * 链接：https://leetcode.cn/problems/lemonade-change
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class LemonadeChange {
+public class Greedy_LemonadeChange {
     public static void main(String[] args) {
         int[] bills = {5,5,5,10,20};
-        System.out.println(lemonadeChange(bills));
+        boolean b = lemonadeChange(bills);
+        boolean b1 = lemonadeChangeII(bills);
+
     }
+
+    private static boolean lemonadeChangeII(int[] bills) {
+        int[] counts = new int[]{0,0,0};
+        for (int i = 0; i < bills.length; i++) {
+            if (bills[i] == 5){
+                counts[0]++;
+            }else if (bills[i] == 10){
+                if (counts[0] > 0){
+                    counts[0]--;
+                    counts[1]++;
+                }else {
+                    return false;
+                }
+
+            }else {
+                if (counts[1] > 0 && counts[0] > 0){
+                    counts[1]--;
+                    counts[0]--;
+                    counts[2]++;
+                }else if (counts[0] >= 3){
+                    counts[0]-=3;
+                    counts[2]++;
+                }else {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+
 
     private static boolean lemonadeChange(int[] bills) {
         int[] counts = {0, 0, 0};

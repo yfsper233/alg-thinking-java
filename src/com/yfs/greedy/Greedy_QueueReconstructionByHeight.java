@@ -1,9 +1,14 @@
 package com.yfs.greedy;
 
+import java.util.Arrays;
+import java.util.LinkedList;
+
 /**
- * 假设有打乱顺序的一群人站成一个队列，数组 people 表示队列中一些人的属性（不一定按顺序）。每个 people[i] = [hi, ki] 表示第 i 个人的身高为 hi ，前面 正好 有 ki 个身高大于或等于 hi 的人。
+ * 假设有打乱顺序的一群人站成一个队列，数组 people 表示队列中一些人的属性（不一定按顺序）。
+ * 每个 people[i] = [hi, ki] 表示第 i 个人的身高为 hi ，前面 正好 有 ki 个身高大于或等于 hi 的人。
  * <p>
- * 请你重新构造并返回输入数组 people 所表示的队列。返回的队列应该格式化为数组 queue ，其中 queue[j] = [hj, kj] 是队列中第 j 个人的属性（queue[0] 是排在队列前面的人）。
+ * 请你重新构造并返回输入数组 people 所表示的队列。返回的队列应该格式化为数组 queue ，
+ * 其中 queue[j] = [hj, kj] 是队列中第 j 个人的属性（queue[0] 是排在队列前面的人）。
  * <p>
  *  
  * <p>
@@ -36,17 +41,35 @@ package com.yfs.greedy;
  * 链接：https://leetcode.cn/problems/queue-reconstruction-by-height
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class QueueReconstructionByHeight {
+public class Greedy_QueueReconstructionByHeight {
     public static void main(String[] args) {
         int[][] people = {{6,0},{5,0},{4,0},{3,2},{2,2},{1,4}};
-        int[][] res =  reconstruct(people);
-        for (int i = 0; i < res.length; i++) {
-            for (int j = 0; j < res[i].length; j++) {
-                System.out.print(res[i][j]);
-            }
-            System.out.print('\t');
-        }
+//        int[][] res =  reconstruct(people);
+        int[][] res2 =  reconstructII(people);
+
     }
+
+    private static int[][] reconstructII(int[][] people) {
+        Arrays.sort(people,((o1, o2) -> {
+            if (o1[0] == o2[0]){
+                return o1[1] - o2[1];
+            }else {
+                return o2[0] - o1[0];
+            }
+        }));
+        LinkedList<int[]> res = new LinkedList<>();
+        for (int[] person : people) {
+            res.add(person[1], person);
+        }
+
+        return res.toArray(new int[people.length][people[0].length]);
+    }
+
+
+
+
+
+
 
     /**
      * 根据结果的要求,前面 正好 有 ki 个身高大于或等于 hi 的人。先安排高个子位置,将身高按照降序排列,相同身高的人先安排ki小的人,将排序好的数组插入到新数组,ki即为其相对位置

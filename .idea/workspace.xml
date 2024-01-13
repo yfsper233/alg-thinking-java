@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="58d0e613-4398-4279-a494-1e72d1d6aa84" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yfs/greedy/Greedy1_AssignCookies.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yfs/greedy/Greedy_1_AssignCookies.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yfs/greedy/WiggleSubsequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yfs/greedy/Greedy_2_WiggleSubsequence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yfs/backtracking/ReconstructItinerary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yfs/backtracking/ReconstructItinerary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yfs/greedy/LemonadeChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yfs/greedy/Greedy_LemonadeChange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yfs/greedy/MinimumNumberOfArrowsToBurstBalloons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yfs/greedy/MinimumNumberOfArrowsToBurstBalloons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yfs/greedy/QueueReconstructionByHeight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yfs/greedy/Greedy_QueueReconstructionByHeight.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,11 +28,27 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="25ELB9LpgdILPBzEaF4WEtFSP8i" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
@@ -38,32 +59,7 @@
       <recent name="D:\workspace\algorithm\src\com\yfs\backtracking" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.Greedy_2_WiggleSubsequence">
-    <configuration name="ExpressionTranslation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.yfs.stack.ExpressionTranslation" />
-      <module name="algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.yfs.stack.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="Greedy_1_AssignCookies" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.yfs.greedy.Greedy_1_AssignCookies" />
       <module name="algorithm" />
@@ -90,8 +86,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MinimumNumberOfArrowsToBurstBalloons" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.yfs.greedy.MinimumNumberOfArrowsToBurstBalloons" />
+    <configuration name="Greedy_LemonadeChange" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yfs.greedy.Greedy_LemonadeChange" />
       <module name="algorithm" />
       <extension name="coverage">
         <pattern>
@@ -103,8 +99,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QueueReconstructionByHeight" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.yfs.greedy.QueueReconstructionByHeight" />
+    <configuration name="Greedy_MinimumNumberOfArrowsToBurstBalloons" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yfs.greedy.Greedy_MinimumNumberOfArrowsToBurstBalloons" />
+      <module name="algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yfs.greedy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Greedy_QueueReconstructionByHeight" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yfs.greedy.Greedy_QueueReconstructionByHeight" />
       <module name="algorithm" />
       <extension name="coverage">
         <pattern>
@@ -118,14 +127,15 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Greedy_MinimumNumberOfArrowsToBurstBalloons" />
+        <item itemvalue="Application.Greedy_QueueReconstructionByHeight" />
+        <item itemvalue="Application.Greedy_LemonadeChange" />
         <item itemvalue="Application.Greedy_2_WiggleSubsequence" />
         <item itemvalue="Application.Greedy_1_AssignCookies" />
-        <item itemvalue="Application.ExpressionTranslation" />
-        <item itemvalue="Application.MinimumNumberOfArrowsToBurstBalloons" />
-        <item itemvalue="Application.QueueReconstructionByHeight" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -136,6 +146,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1645087160303</updated>
+      <workItem from="1705126097858" duration="9449000" />
     </task>
     <task id="LOCAL-00001" summary="(全局)添加gitignore文件">
       <created>1704788715053</created>
@@ -154,14 +165,15 @@
     <option name="localTasksCounter" value="3" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -170,11 +182,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="(全局)添加gitignore文件" />
     <option name="LAST_COMMIT_MESSAGE" value="(全局)添加gitignore文件" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="198" height="326" key="Git.Branch.Popup" />
-    <state width="198" height="326" key="Git.Branch.Popup/1920.1080" />
-    <state width="198" height="326" key="Git.Branch.Popup@1920.1080" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -205,11 +212,6 @@
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/yfs/greedy/MinimumNumberOfArrowsToBurstBalloons.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/yfs/stack/ExpressionTranslation.java</url>
           <line>17</line>
           <option name="timeStamp" value="62" />
@@ -223,6 +225,26 @@
           <url>file://$PROJECT_DIR$/src/com/yfs/greedy/Greedy_2_WiggleSubsequence.java</url>
           <line>61</line>
           <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/yfs/greedy/Greedy_LemonadeChange.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/yfs/greedy/Greedy_QueueReconstructionByHeight.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/yfs/greedy/MinimumNumberOfArrowsToBurstBalloons.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/yfs/greedy/MinimumNumberOfArrowsToBurstBalloons.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="79" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
