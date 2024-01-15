@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58d0e613-4398-4279-a494-1e72d1d6aa84" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="58d0e613-4398-4279-a494-1e72d1d6aa84" name="Default Changelist" comment="(贪心算法)">
+      <change afterPath="$PROJECT_DIR$/src/com/yfs/DynamicProgramming.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/yfs/greedy/Greedy_BinaryTreeCameras.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/yfs/greedy/Greedy_MergeIntervals.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/yfs/greedy/Greedy_MonotoneIncreasingDigits.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/yfs/greedy/Greedy_NonOverlappingIntervals.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/yfs/greedy/Greedy_PartitionLabels.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yfs/backtracking/ReconstructItinerary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yfs/backtracking/ReconstructItinerary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yfs/greedy/LemonadeChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yfs/greedy/Greedy_LemonadeChange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yfs/greedy/MinimumNumberOfArrowsToBurstBalloons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yfs/greedy/MinimumNumberOfArrowsToBurstBalloons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yfs/greedy/QueueReconstructionByHeight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yfs/greedy/Greedy_QueueReconstructionByHeight.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +28,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -46,10 +55,11 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -59,9 +69,9 @@
       <recent name="D:\workspace\algorithm\src\com\yfs\backtracking" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="Greedy_1_AssignCookies" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.yfs.greedy.Greedy_1_AssignCookies" />
+  <component name="RunManager" selected="Application.Greedy_BinaryTreeCameras">
+    <configuration name="Greedy_BinaryTreeCameras" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yfs.greedy.Greedy_BinaryTreeCameras" />
       <module name="algorithm" />
       <extension name="coverage">
         <pattern>
@@ -73,8 +83,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Greedy_2_WiggleSubsequence" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.yfs.greedy.Greedy_2_WiggleSubsequence" />
+    <configuration name="Greedy_MergeIntervals" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yfs.greedy.Greedy_MergeIntervals" />
       <module name="algorithm" />
       <extension name="coverage">
         <pattern>
@@ -86,8 +96,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Greedy_LemonadeChange" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.yfs.greedy.Greedy_LemonadeChange" />
+    <configuration name="Greedy_MonotoneIncreasingDigits" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yfs.greedy.Greedy_MonotoneIncreasingDigits" />
       <module name="algorithm" />
       <extension name="coverage">
         <pattern>
@@ -99,8 +109,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Greedy_MinimumNumberOfArrowsToBurstBalloons" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.yfs.greedy.Greedy_MinimumNumberOfArrowsToBurstBalloons" />
+    <configuration name="Greedy_NonOverlappingIntervals" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yfs.greedy.Greedy_NonOverlappingIntervals" />
       <module name="algorithm" />
       <extension name="coverage">
         <pattern>
@@ -112,8 +122,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Greedy_QueueReconstructionByHeight" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.yfs.greedy.Greedy_QueueReconstructionByHeight" />
+    <configuration name="Greedy_PartitionLabels" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yfs.greedy.Greedy_PartitionLabels" />
       <module name="algorithm" />
       <extension name="coverage">
         <pattern>
@@ -127,11 +137,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Greedy_MinimumNumberOfArrowsToBurstBalloons" />
-        <item itemvalue="Application.Greedy_QueueReconstructionByHeight" />
-        <item itemvalue="Application.Greedy_LemonadeChange" />
-        <item itemvalue="Application.Greedy_2_WiggleSubsequence" />
-        <item itemvalue="Application.Greedy_1_AssignCookies" />
+        <item itemvalue="Application.Greedy_BinaryTreeCameras" />
+        <item itemvalue="Application.Greedy_MonotoneIncreasingDigits" />
+        <item itemvalue="Application.Greedy_MergeIntervals" />
+        <item itemvalue="Application.Greedy_PartitionLabels" />
+        <item itemvalue="Application.Greedy_NonOverlappingIntervals" />
       </list>
     </recent_temporary>
   </component>
@@ -146,7 +156,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1645087160303</updated>
-      <workItem from="1705126097858" duration="9449000" />
+      <workItem from="1705126097858" duration="18729000" />
+      <workItem from="1705303656213" duration="2251000" />
+      <workItem from="1705306160847" duration="6254000" />
     </task>
     <task id="LOCAL-00001" summary="(全局)添加gitignore文件">
       <created>1704788715053</created>
@@ -162,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1704788915751</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="(贪心算法)">
+      <created>1705135931018</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1705135931018</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,7 +200,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="(全局)添加gitignore文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="(全局)添加gitignore文件" />
+    <MESSAGE value="(贪心算法)" />
+    <option name="LAST_COMMIT_MESSAGE" value="(贪心算法)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -237,16 +257,41 @@
           <option name="timeStamp" value="75" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/yfs/greedy/MinimumNumberOfArrowsToBurstBalloons.java</url>
+          <url>file://$PROJECT_DIR$/src/com/yfs/greedy/Greedy_MinimumNumberOfArrowsToBurstBalloons.java</url>
           <line>56</line>
           <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/yfs/greedy/MinimumNumberOfArrowsToBurstBalloons.java</url>
-          <line>83</line>
+          <url>file://$PROJECT_DIR$/src/com/yfs/greedy/Greedy_MinimumNumberOfArrowsToBurstBalloons.java</url>
+          <line>82</line>
           <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/yfs/greedy/Greedy_PartitionLabels.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/yfs/greedy/Greedy_MonotoneIncreasingDigits.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/yfs/greedy/Greedy_BinaryTreeCameras.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/yfs/greedy/Greedy_BinaryTreeCameras.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="88" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/alg_thinking_java$Greedy_MergeIntervals.ic" NAME="Greedy_MergeIntervals Coverage Results" MODIFIED="1705248995788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.yfs.greedy.*</FILTER>
+    </SUITE>
   </component>
 </project>
