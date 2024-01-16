@@ -1,6 +1,8 @@
 package com.yfs.greedy;
 
 
+import java.util.Arrays;
+
 /**
  * 134  加油站
  * <p>
@@ -48,35 +50,58 @@ package com.yfs.greedy;
  * 链接：https://leetcode.cn/problems/gas-station
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class GasStation {
+public class Greedy_8_GasStation {
     public static void main(String[] args) {
-        int[] gas = {1,2,3,4,5};
-        int[] cost = {3,4,5,1,2};
+        int[] gas = {2};
+        int[] cost = {3};
         int startIndex = getStartGasStation(gas, cost);
+        int startIndex2 = getStartGasStationII(gas, cost);
         System.out.println(startIndex);
     }
 
+    private static int getStartGasStationII(int[] gas, int[] cost) {
+
+        int[] profits = new int[gas.length];
+        for (int i = 0; i < gas.length; i++) {
+            profits[i] = gas[i] - cost[i];
+        }
+        int sum = Arrays.stream(profits).sum();
+        if (sum < 0) {
+            return -1;
+        }
+        int curSum = 0;
+        int startIndex = 0;
+        for (int i = 0; i < profits.length; i++) {
+            curSum = curSum + profits[i];
+            if (curSum < 0) {
+                startIndex = i + 1;
+                curSum = 0;
+            }
+
+        }
+        return startIndex > profits.length - 1 ? -1 : startIndex;
+    }
+
     /**
-     *
      * @param gas
      * @param cost
      * @return
      */
     private static int getStartGasStation(int[] gas, int[] cost) {
         int curSum = 0;
-        int totalSum = 0 ;
+        int totalSum = 0;
         int startIndex = 0;
         for (int i = 0; i < gas.length; i++) {
             curSum += gas[i] - cost[i];
             totalSum += gas[i] - cost[i];
             // 贪心策略 连续字串和小于0，i就不是起点，继续假设以下一个点为起点
-            if (curSum < 0 ){
+            if (curSum < 0) {
                 curSum = 0;
                 startIndex = i + 1;
             }
         }
 
-        if (totalSum < 0){
+        if (totalSum < 0) {
             return -1;
         }
         return startIndex;

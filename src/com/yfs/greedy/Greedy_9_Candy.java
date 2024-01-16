@@ -36,12 +36,45 @@ package com.yfs.greedy;
  * 链接：https://leetcode.cn/problems/candy
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class Candy {
+public class Greedy_9_Candy {
     public static void main(String[] args) {
         int[] rating = {1,3,4,5,2};
         int candies = distributeCandy(rating);
+        int candies2 = distributeCandyII(rating);
         System.out.println(candies);
     }
+
+    private static int distributeCandyII(int[] rating) {
+        int count = rating.length;
+        int[] candies = new int[rating.length];
+        for (int i = 0; i < rating.length; i++) {
+            candies[i] = 1;
+        }
+        for (int i = 1; i < rating.length; i++) {
+            if (rating[i] > rating[i-1] && candies[i] <= candies[i-1]){
+                int sub = (candies[i - 1] - candies[i]) + 1;
+                candies[i] = candies[i] + sub;
+                count += sub;
+            }
+        }
+        for (int i = rating.length - 1 ; i > 0  ; i--) {
+            if (rating[i] < rating[i-1] && candies[i] >= candies[i-1]){
+                int sub = (candies[i] - candies[i-1]) + 1;
+                candies[i-1]+=sub;
+                count+=sub;
+            }
+        }
+        return count;
+    }
+
+
+
+
+
+
+
+
+
 
     private static int distributeCandy(int[] rating) {
         if (rating == null || rating.length == 0){

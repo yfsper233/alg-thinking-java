@@ -32,26 +32,59 @@ package com.yfs.greedy;
  * 链接：https://leetcode-cn.com/problems/jump-game
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class JumpGame {
+public class Greedy_5_JumpGame {
     public static void main(String[] args) {
-        int[] nums = {2,3,1,1,4};
+        int[] nums = {3, 2, 1, 0, 4};
         boolean res = canJump2(nums);
+        boolean res3 = canJump3(nums);
         System.out.println(res);
     }
 
+    private static boolean canJump3(int[] nums) {
+        if (nums.length == 1) {
+            return true;
+        }
+
+        int[] profits = new int[nums.length - 1];
+        for (int i = 0; i < nums.length - 1; i++) {
+            profits[i] = nums[i] + i - nums.length + 1;
+        }
+        for (int i = 0; i < nums.length; ) {
+            if (nums[i] == 0) {
+                return false;
+            }
+            if (nums[i] + i - nums.length + 1 >= 0) {
+                return true;
+            }
+            int maxProfit = Integer.MIN_VALUE;
+            int nextIndex = i + 1;
+
+            for (int j = i + 1; j < nums[i] + i + 1; j++) {
+                if (profits[j] >= maxProfit) {
+                    maxProfit = profits[j];
+                    nextIndex = j;
+                }
+            }
+
+            i = nextIndex;
+        }
+        return false;
+    }
+
+
     private static boolean canJump(int[] nums) {
         int i = 0;
-        while ((nums[i] + i) < nums.length-1 ){
+        while ((nums[i] + i) < nums.length - 1) {
             // 贪心策略：下一跳选择落在可覆盖范围最大的点
             int max = Integer.MIN_VALUE;
             int nextIndex = i;
-            for (int j = i +1; j <= (nums[i] + i) && j <= nums.length-1; j++) {
+            for (int j = i + 1; j <= (nums[i] + i) && j <= nums.length - 1; j++) {
                 if (nums[j] + j >= max) {
                     max = nums[j] + j;
                     nextIndex = j;
                 }
             }
-            if (i == nextIndex){
+            if (i == nextIndex) {
                 return false;
             }
             // 跳到下一个最优点
@@ -60,14 +93,14 @@ public class JumpGame {
         return true;
     }
 
-    private static  boolean canJump2(int[] nums){
-        if (nums.length == 1){
+    private static boolean canJump2(int[] nums) {
+        if (nums.length == 1) {
             return true;
         }
         int coverage = 0;
         for (int i = 0; i <= coverage; i++) {
-            coverage = Math.max(coverage,nums[i] + i);
-            if (coverage >= nums.length - 1 ){
+            coverage = Math.max(coverage, nums[i] + i);
+            if (coverage >= nums.length - 1) {
                 return true;
             }
         }

@@ -37,11 +37,23 @@ package com.yfs.greedy;
  * 链接：https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class BestTimeToBuyAndSaleStockII {
+public class Greedy_4_BestTimeToBuyAndSaleStockII {
     public static void main(String[] args) {
         int[] prices = {7,6,4,3,1};
         int res = solve(prices);
+        int res2 = solveII(prices);
         System.out.println(res);
+    }
+
+    private static int solveII(int[] prices) {
+        int res = 0;
+        for (int i = 1; i < prices.length; i++) {
+            int sub = prices[i] - prices[i - 1];
+            if (sub > 0){
+                res += sub;
+            }
+        }
+        return res;
     }
 
     private static int solve(int[] prices) {

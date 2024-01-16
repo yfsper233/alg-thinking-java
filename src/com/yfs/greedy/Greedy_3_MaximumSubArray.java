@@ -1,5 +1,7 @@
 package com.yfs.greedy;
 
+import java.util.ArrayList;
+
 /**
  * 题号:[53]
  * 给你一个整数数组 nums ，请你找出一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
@@ -35,13 +37,29 @@ package com.yfs.greedy;
  * 链接：https://leetcode-cn.com/problems/maximum-subarray
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class MaximumSubArray {
+public class Greedy_3_MaximumSubArray {
     public static void main(String[] args) {
-// 贪心策略分析:对于a+b,当a<0时,将a及其之前的丢掉,从b开始计算.
-        int[] nums = {5,4,-1,7,8};
+        int[] nums = {5, 4, -1, 7, 8};
         int n = getMaximumSubArray(nums);
+        int n2 = getMaximumSubArrayII(nums);
         System.out.println(n);
     }
+
+    private static int getMaximumSubArrayII(int[] nums) {
+        int maxSum = Integer.MIN_VALUE;
+        int curSum = 0;
+        for (int i = 0; i < nums.length; i++) {
+            curSum += nums[i];
+            maxSum = Math.max(curSum, maxSum);
+            // 当cursum<0时，加上下一个元素，只会让和更小。此时可以移动左侧区间
+            if (curSum < 0){
+                curSum = 0;
+            }
+
+        }
+        return maxSum;
+    }
+
 
     private static int getMaximumSubArray(int[] nums) {
         int curSum = 0;
