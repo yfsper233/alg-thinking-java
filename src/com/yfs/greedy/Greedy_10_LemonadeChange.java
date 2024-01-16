@@ -40,7 +40,7 @@ package com.yfs.greedy;
  * 链接：https://leetcode.cn/problems/lemonade-change
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class Greedy_LemonadeChange {
+public class Greedy_10_LemonadeChange {
     public static void main(String[] args) {
         int[] bills = {5,5,5,10,20};
         boolean b = lemonadeChange(bills);

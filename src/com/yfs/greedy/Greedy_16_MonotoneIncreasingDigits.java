@@ -29,7 +29,7 @@ package com.yfs.greedy;
  * <p>
  * https://leetcode.cn/problems/monotone-increasing-digits/description/
  */
-public class Greedy_MonotoneIncreasingDigits {
+public class Greedy_16_MonotoneIncreasingDigits {
     public static void main(String[] args) {
 //        int res = monotoneIncreasingDigits(332);
         int res2 = monotoneIncreasingDigitsII(100);

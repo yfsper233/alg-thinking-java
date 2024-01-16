@@ -35,7 +35,7 @@ import com.yfs.stack.BiTreeNode;
  * <p>
  * https://leetcode.cn/problems/binary-tree-cameras/description/
  */
-public class Greedy_BinaryTreeCameras {
+public class Greedy_17_BinaryTreeCameras {
     private static int res = 0;
 
     public static void main(String[] args) {

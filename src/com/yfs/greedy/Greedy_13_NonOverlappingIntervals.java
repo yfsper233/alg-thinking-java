@@ -33,7 +33,7 @@ import java.util.Arrays;
  *
  * https://leetcode.cn/problems/non-overlapping-intervals/description/
  */
-public class Greedy_NonOverlappingIntervals {
+public class Greedy_13_NonOverlappingIntervals {
     public static void main(String[] args) {
         int[][] input = {{1,2},{2,3}};
 

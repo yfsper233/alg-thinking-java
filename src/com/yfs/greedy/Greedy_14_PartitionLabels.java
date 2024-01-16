@@ -32,7 +32,7 @@ import java.util.List;
  * s 仅由小写英文字母组成
  * https://leetcode.cn/problems/partition-labels/description/
  */
-public class Greedy_PartitionLabels {
+public class Greedy_14_PartitionLabels {
     public static void main(String[] args) {
         String s = "eccbbbbdec";
        List<Integer> res = partitionLabels(s);

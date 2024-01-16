@@ -30,7 +30,7 @@ import java.util.List;
  * <p>
  * https://leetcode.cn/problems/merge-intervals/description/
  */
-public class Greedy_MergeIntervals {
+public class Greedy_15_MergeIntervals {
     public static void main(String[] args) {
         int[][] input = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
         int[][] res = mergeIntervals(input);

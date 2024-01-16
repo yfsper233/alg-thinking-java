@@ -41,7 +41,7 @@ import java.util.LinkedList;
  * 链接：https://leetcode.cn/problems/queue-reconstruction-by-height
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class Greedy_QueueReconstructionByHeight {
+public class Greedy_11_QueueReconstructionByHeight {
     public static void main(String[] args) {
         int[][] people = {{6,0},{5,0},{4,0},{3,2},{2,2},{1,4}};
 //        int[][] res =  reconstruct(people);
