@@ -25,7 +25,7 @@ package com.yfs.dynamicprogramming;
  * <p>
  * https://leetcode.cn/problems/unique-binary-search-trees/description/
  */
-public class DP_6_UniqueBinarySearchTrees {
+public class DP_7_UniqueBinarySearchTrees {
     public static void main(String[] args) {
         int res = uniqueBinarySearchTrees(3);
     }
