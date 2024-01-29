@@ -1,6 +1,6 @@
 package com.yfs.greedy;
 
-import com.yfs.stack.BiTreeNode;
+import com.yfs.others.BiTreeNode;
 
 /**
  * 968. 监控二叉树

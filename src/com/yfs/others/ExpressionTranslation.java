@@ -1,4 +1,4 @@
-package com.yfs.stack;
+package com.yfs.others;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.yfs.stack;
+package com.yfs.others;
 
 public class BiTreeNode {
     private String name;
