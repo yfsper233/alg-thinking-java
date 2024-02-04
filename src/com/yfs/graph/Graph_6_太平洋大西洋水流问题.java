@@ -33,24 +33,68 @@ import java.util.Queue;
  */
 public class Graph_6_太平洋大西洋水流问题 {
     public static void main(String[] args) {
-        int[][] heights = {{1, 2, 2, 3, 5}, {3, 2, 3, 4, 4}, {2, 4, 5, 3, 1}, {6, 7, 1, 4, 5}, {5, 1, 1, 2, 4}};
-        pacificAtlantic(heights);
+//        int[][] heights = {{1, 2, 2, 3, 5}, {3, 2, 3, 4, 4}, {2, 4, 5, 3, 1}, {6, 7, 1, 4, 5}, {5, 1, 1, 2, 4}};
+//        int[][] heights = {{1,1},{1,1},{1,1}};
+        int[][] heights = {{3,3,3,3,3,3},{3,0,3,3,0,3},{3,3,3,3,3,3}};
+        List<List<Integer>> res = pacificAtlantic(heights);
     }
 
     public static List<List<Integer>> pacificAtlantic(int[][] heights) {
-        List<List<Integer>> resList = new ArrayList<>();
-        Queue<int[]> queue = new LinkedList<>();
+        // 由四周开始搜索 有路径的置为true
+        // 到太平洋有路径的为true
+        boolean[][] pacificTags = new boolean[heights.length][heights[0].length];
+        // 到大西洋有路径的为true
+        boolean[][] atlanticTags = new boolean[heights.length][heights[0].length];
+
         for (int i = 0; i < heights.length; i++) {
             for (int j = 0; j < heights[i].length; j++) {
-                queue.add(new int[]{i,j});
-                resList =  bfs(queue, heights);
+                if ((i == 0 || j == 0) && !pacificTags[i][j]) {
+                    Queue<int[]> queue = new LinkedList<>();
+                    queue.add(new int[]{i, j});
+                    pacificTags[i][j] = true;
+                    bfs(queue, heights, pacificTags);
+                }
+
+                if ((i == heights.length - 1 || j == heights[i].length - 1) && !atlanticTags[i][j]) {
+                    Queue<int[]> queue = new LinkedList<>();
+                    queue.add(new int[]{i, j});
+                    atlanticTags[i][j] = true;
+                    bfs(queue, heights, atlanticTags);
+                }
+            }
+        }
+        List<List<Integer>> resList = new ArrayList<>();
+        for (int i = 0; i < heights.length; i++) {
+            for (int j = 0; j < heights[i].length; j++) {
+                if (pacificTags[i][j] && atlanticTags[i][j]){
+                    ArrayList<Integer> list = new ArrayList<>();
+                    list.add(i);
+                    list.add(j);
+                    resList.add(list);
+                }
             }
         }
         return resList;
     }
 
-    private static List<List<Integer>> bfs(Queue<int[]> queue, int[][] heights) {
+    private static void bfs(Queue<int[]> queue, int[][] heights, boolean[][] tags) {
+        int[][] dir = {{1, 0}, {-1, 0}, {0, -1}, {0, 1}};
+        while (!queue.isEmpty()) {
+            int[] cur = queue.poll();
+            int x = cur[0];
+            int y = cur[1];
 
-        return null;
+            for (int i = 0; i < dir.length; i++) {
+                int nx = cur[0] + dir[i][0];
+                int ny = cur[1] + dir[i][1];
+                if (nx < 0 || nx >= heights.length || ny < 0 || ny >= heights[x].length) {
+                    continue;
+                }
+                if (!tags[nx][ny] && heights[nx][ny] >= heights[x][y]) {
+                    tags[nx][ny] = true;
+                    queue.offer(new int[]{nx, ny});
+                }
+            }
+        }
     }
 }
